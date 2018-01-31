@@ -233,7 +233,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 639191147}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.49, y: 1.87, z: 8.158665}
+  m_LocalPosition: {x: -2.29, y: 1.66, z: 8.158665}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -484,12 +484,12 @@ Prefab:
     - target: {fileID: 224074316209898176, guid: 36e69068c53bfe847b1411a96582882d,
         type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: 283
+      value: 17
       objectReference: {fileID: 0}
     - target: {fileID: 224074316209898176, guid: 36e69068c53bfe847b1411a96582882d,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: -98
+      value: -101
       objectReference: {fileID: 0}
     - target: {fileID: 224074316209898176, guid: 36e69068c53bfe847b1411a96582882d,
         type: 2}
@@ -530,6 +530,11 @@ Prefab:
         type: 2}
       propertyPath: m_Pivot.y
       value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000149657111820, guid: 36e69068c53bfe847b1411a96582882d,
+        type: 2}
+      propertyPath: m_FontData.m_FontSize
+      value: 49
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 36e69068c53bfe847b1411a96582882d, type: 2}
