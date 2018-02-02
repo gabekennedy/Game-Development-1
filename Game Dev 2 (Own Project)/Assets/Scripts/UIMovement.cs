@@ -21,15 +21,24 @@ public class UIMovement : MonoBehaviour
      // Update is called once per frame
      void Update () {
 
+        if (canvas.position.x < -123)
+        {
 
-         transform.Translate(speed, 0, 0);
+            transform.Translate(speed, 0, 0);
 
-         if (Input.GetKeyDown(KeyCode.Space))
+        }
+
+        else
+        {
+            transform.Translate(0, 0, 0);
+        }
+
+  /*      if (Input.GetKeyDown(KeyCode.Space))
          {
             canvas.position = new Vector2(transform.position.x+5, transform.position.y)*Time.deltaTime;
 
          }         
-
+         */
      }
 
    
