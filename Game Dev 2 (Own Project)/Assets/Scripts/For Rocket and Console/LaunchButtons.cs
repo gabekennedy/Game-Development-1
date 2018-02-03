@@ -11,7 +11,7 @@ public class LaunchButtons : MonoBehaviour
 
    public bool RocketUp = false;
 
-    public GameObject Rocket;
+    public GameObject rocketPrefab;
 
     
 
@@ -29,14 +29,10 @@ public class LaunchButtons : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Space))
         {
-
             RocketUp = true;
-            GameObject newRocket = Instantiate(Rocket);
+            GameObject newRocket = Instantiate(rocketPrefab);
             newRocket.transform.position = new Vector3(-4, -4, 0);
-
-            
-
-
+            newRocket.transform.Translate (new Vector3(0, 10, 0));
         }
 
        

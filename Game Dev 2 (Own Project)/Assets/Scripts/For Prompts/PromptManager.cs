@@ -4,18 +4,36 @@ using UnityEngine;
 
 public class PromptManager : MonoBehaviour {
 
-    public List<Prompts> prompts;
-    public static PromptManager manager;
-    public int randomNumber;
+    public int random;
+    GameManager gameManager;
+   // public List<Prompts> prompts;
+   // public static PromptManager manager = null;
+    // public List<strings[]> = new List<strings[]>(); THIS WOULD HAVE BEEN USED HAD WE USED AN ARRAY FOR EACH DAY, AND AN ARRAY TO CALL EACH OF THESE DAYS
 
-    string[] dailyPromptText = new string[2];
-    dailyPromptText[0] = "day one prompt one";
-    dailyPromptText[1] = "day one prompt two";
+    string[] promptText = new string[10];
+
+    /*
+    private void Awake()
+    {
+        if (manager == null)
+        {
+            DontDestroyOnLoad(this);
+            manager = this;
+        }
+        else
+        {
+            Destroy(this.gameObject);
+        }
+    }
+    */
 
     // Use this for initialization
     void Start () {
 
-        randomNumber = UnityEngine.Random.Range(1, 2);
+        gameManager = GetComponent<GameManager>();
+        random = UnityEngine.Random.Range(0, 1);
+        /*
+        random = UnityEngine.Random.Range(1, 2);
         prompts = new List<Prompts>();
         manager = this;
         for (int counter = 0; counter < 1; counter++)
@@ -30,18 +48,48 @@ public class PromptManager : MonoBehaviour {
 
 
         }
+        */
+
+        //define all your prompts per day
+        promptText[0] = "Late Shipment";
+        promptText[1] = "Contraband Shipment";
+        promptText[2] = "Pirate Favour";
+        promptText[3] = "Tight Schedule";
+        promptText[4] = "Night Shift";
+        promptText[5] = "Radio Interference";
+        promptText[6] = "Late Shipment";
+        promptText[7] = "Contraband Shipment";
+        promptText[8] = "Pirate Favour";
+        promptText[9] = "Tight Schedule";
+        
+        
+
+        //  dailyPromptText.Add(promptTextDay1);
+
+
+        string text = promptText[(gameManager.dayNumber * 2) + random];
+
+        //string text = dailyPromptText[0][1];
+
     }
 
 
     /// <summary>
     /// Making each unique prompt bubble
-    /// </summary>
+    /// </summary> 
+    /// NO LONGER NECESSARY, NO LONGER USING LISTS
+    /*
     Prompts contraShipment = new Prompts("Order", 1, 1);
     Prompts lateShipment = new Prompts("Order", 1, 2);
-
+    */ 
     // Update is called once per frame
     void Update () {
 		
+        foreach(string prompt in promptText)
+        {
+
+            Debug.Log(prompt);
+        }
       
 	}
 }
