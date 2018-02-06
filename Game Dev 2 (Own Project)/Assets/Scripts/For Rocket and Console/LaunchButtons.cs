@@ -13,14 +13,13 @@ public class LaunchButtons : MonoBehaviour
 
     public GameObject rocketPrefab;
 
-    
+    public int counter;
 
     // Use this for initialization
     void Start()
     {
 
        
-
     }
 
     // Update is called once per frame
@@ -35,6 +34,7 @@ public class LaunchButtons : MonoBehaviour
             newRocket.transform.Translate (new Vector3(0, 10, 0));
         }
 
+        
        
 
     }

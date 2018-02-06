@@ -141,7 +141,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   RocketUp: 0
-  Rocket: {fileID: 1754308087645826, guid: 4fa0e9bb02835e84a9215323afa0cef3, type: 2}
+  rocketPrefab: {fileID: 1754308087645826, guid: 4fa0e9bb02835e84a9215323afa0cef3,
+    type: 2}
 --- !u!4 &325505781
 Transform:
   m_ObjectHideFlags: 0
@@ -648,8 +649,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 42fcea164dae84f4a9fc350f2bc81867, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  counter: 0
-  RocketUp: 0
 --- !u!1 &1979214763
 GameObject:
   m_ObjectHideFlags: 0

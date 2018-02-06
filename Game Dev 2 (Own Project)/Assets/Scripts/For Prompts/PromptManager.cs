@@ -11,6 +11,8 @@ public class PromptManager : MonoBehaviour {
     // public List<strings[]> = new List<strings[]>(); THIS WOULD HAVE BEEN USED HAD WE USED AN ARRAY FOR EACH DAY, AND AN ARRAY TO CALL EACH OF THESE DAYS
 
     string[] promptText = new string[10];
+    
+    
 
     /*
     private void Awake()
@@ -67,12 +69,21 @@ public class PromptManager : MonoBehaviour {
         //  dailyPromptText.Add(promptTextDay1);
 
 
-        string text = promptText[(gameManager.dayNumber * 2) + random];
+        
+
+        
 
         //string text = dailyPromptText[0][1];
 
     }
 
+    public void startDialogue()
+    {
+        //we need to actually show this text on the screen 
+        Debug.Log("Receiving Order" + promptText[0]);
+        string text = promptText[(gameManager.dayNumber * 2) + random];
+        promptText.text = text;
+    }
 
     /// <summary>
     /// Making each unique prompt bubble
@@ -82,14 +93,26 @@ public class PromptManager : MonoBehaviour {
     Prompts contraShipment = new Prompts("Order", 1, 1);
     Prompts lateShipment = new Prompts("Order", 1, 2);
     */ 
-    // Update is called once per frame
+    
     void Update () {
-		
-        foreach(string prompt in promptText)
+
+
+
+        startDialogue();
+       
+       
+
+
+        /*foreach(string prompt in promptText)
         {
 
             Debug.Log(prompt);
-        }
+        }*/
       
 	}
+
+
+   
+
+
 }
