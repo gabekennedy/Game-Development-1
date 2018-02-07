@@ -82,7 +82,7 @@ public class PromptManager : MonoBehaviour {
         //we need to actually show this text on the screen 
         Debug.Log("Receiving Order" + promptText[0]);
         string text = promptText[(gameManager.dayNumber * 2) + random];
-        promptText.text = text;
+        //promptText.text = text;
     }
 
     /// <summary>
