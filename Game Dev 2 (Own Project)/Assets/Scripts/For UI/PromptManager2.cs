@@ -52,6 +52,12 @@ public class PromptManager2 : MonoBehaviour {
 
 
     }*/
+    public void Options(Prompt prompt)
+    {
+
+
+
+    }
     
 
     
